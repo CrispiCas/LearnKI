@@ -15,6 +15,7 @@ model = keras.models.Sequential([
     keras.layers.Flatten(input_shape=(28,28)),
     keras.layers.Dense(128, activation='relu'),
     keras.layers.Dense(10),
+    keras.layers.Softmax()
 ])
 
 # loss and optimizer
@@ -26,7 +27,7 @@ model.compile(loss=loss, optimizer=optim, metrics=metrics)
 
 # training
 batch_size = 64
-epochs = 100
+epochs = 150
 
 model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, shuffle=True, verbose=1)
 
