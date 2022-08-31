@@ -100,4 +100,4 @@ board = [1,2,0,1,0,2,2,1,0]
 field = tf.constant([[board[0],board[1],board[2]],[board[3],board[4],board[5]],[board[6],board[7], board[8]]], shape=(3,3))
 
 
-print(field.numpy())
+print(field.numpy()) #print numpy field
